@@ -36,6 +36,9 @@ body {
 
 .arrow{
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     background-color: rgba(255, 255, 255, 0.509);
@@ -45,8 +48,8 @@ body {
     left: 50%;
     font-size: 30px;
     transform: translateX(-50%);
-    text-align: center;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .next{
@@ -118,4 +121,10 @@ button:hover, button:focus {
 
 .description {
     position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+    text-align: right;
+    padding: 3rem 1rem;
 }
