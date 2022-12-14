@@ -1,19 +1,43 @@
 const imagesArray = [
-    "01.webp",
-    "02.webp",
-    "03.webp",
-    "04.webp",
-    "05.webp"
+    {
+        url: "01.webp",
+        nome: "Spiderman: Miles Morales",
+        descrizione: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequatur minima quas laudantium doloribus quibusdam eligendi assumenda"
+    },
+    {
+        url: "02.webp",
+        nome: "Ratchet & Clank",
+        descrizione: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequatur minima quas laudantium doloribus quibusdam eligendi assumenda"
+    },
+    {
+        url: "03.webp",
+        nome: "Fortnite",
+        descrizione: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequatur minima quas laudantium doloribus quibusdam eligendi assumenda"
+    },
+    {
+        url: "04.webp",
+        nome: "Stray Cat",
+        descrizione: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequatur minima quas laudantium doloribus quibusdam eligendi assumenda"
+    },
+    {
+        url: "05.webp",
+        nome: "Marvels Avengers",
+        descrizione: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt consequatur minima quas laudantium doloribus quibusdam eligendi assumenda"
+    }
 ] 
 
 //Creiamo dinamicamente i div con le immagini del carosello
 let itemsContent = '';
 
-for(let i = 0; i < imagesArray.length; i++){
-    itemsContent += `<div class="item">
-        <img src="./img/${imagesArray[i]}">
-    </div>`
-}
+imagesArray.forEach((element) =>{
+    itemsContent += `<div class="contenitore-slide item">
+                                <img src="./img/${element.url}" alt="">
+                                <div class="description">
+                                    <h4>${element.nome}</h4>
+                                    <p>${element.descrizione}</p>
+                                </div>
+                            </div>`
+})
 
 //inseriamo le immagini nel div che le deve contenere
 const itemsSlider = document.querySelector('.item-slider');
